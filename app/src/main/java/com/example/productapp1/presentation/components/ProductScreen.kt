@@ -19,7 +19,7 @@ fun ProductScreen(modifier: Modifier, productState: ProductState) {
         }
     }
 
-    if (productState.errorMsg.isNullOrEmpty()) {
+    if (!productState.errorMsg.isNullOrEmpty()) {
         Box(modifier = modifier.fillMaxSize()) {
             Text(text = productState.errorMsg.toString(), modifier.align(Alignment.Center))
         }
