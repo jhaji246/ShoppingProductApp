@@ -27,6 +27,7 @@ object AppModule {
     @Singleton
     fun provideproductApi(retrofit: Retrofit): ProductApi = retrofit.create(ProductApi::class.java)
 
+
     @Provides
     @Singleton
     fun provideProductRepository(productApi: ProductApi): ProductRepository {
